@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/Bar_only.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Health_bar.png" type="Texture" id=2]
+
+[node name="HP Bar" type="TextureProgress"]
+margin_right = 4.0
+margin_bottom = 14.0
+value = 100.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 1 )
+texture_progress_offset = Vector2( 20, 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,550 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://sprites/title.png" type="Texture" id=1]
+[ext_resource path="res://sprites/RULES.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Menu/START_GAME.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Menu/TEAM_NAME.png" type="Texture" id=4]
+[ext_resource path="res://scripts/MenuScreen.gd" type="Script" id=5]
+[ext_resource path="res://sprites/Menu/Slide 2.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Menu/Slide 3.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Menu/Slide 1.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Menu/Arrow.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Menu/Example2.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Menu/Example1.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Difficulty.png" type="Texture" id=12]
+[ext_resource path="res://sprites/the_damage.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Shuffle.png" type="Texture" id=14]
+[ext_resource path="res://sprites/smart.png" type="Texture" id=15]
+[ext_resource path="res://sprites/Unchecked.png" type="Texture" id=16]
+[ext_resource path="res://sprites/BABAS_HP.png" type="Texture" id=17]
+[ext_resource path="res://sprites/Default.png" type="Texture" id=18]
+[ext_resource path="res://sprites/YOUR_HP.png" type="Texture" id=19]
+[ext_resource path="res://sprites/Checked.png" type="Texture" id=20]
+
+[node name="MenuScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = -1.0
+margin_right = -1.0
+margin_bottom = -1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.160784, 0.192157, 0.254902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 73.0
+margin_right = -81.0
+color = Color( 0.054902, 0.0823529, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowLeft" type="Control" parent="."]
+visible = false
+margin_left = 110.0
+margin_top = 523.0
+margin_right = 150.0
+margin_bottom = 563.0
+
+[node name="ArrowLeft" type="TextureRect" parent="ArrowLeft"]
+margin_right = 111.0
+margin_bottom = 84.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 9 )
+flip_h = true
+flip_v = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftArrow" type="Button" parent="ArrowLeft"]
+self_modulate = Color( 0.054902, 0.0823529, 0.156863, 0 )
+show_behind_parent = true
+margin_right = 83.0
+margin_bottom = 59.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowRight" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowRight" type="TextureRect" parent="ArrowRight"]
+margin_left = 830.0
+margin_top = 523.0
+margin_right = 941.0
+margin_bottom = 607.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightArrow" type="Button" parent="ArrowRight"]
+self_modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+margin_left = 833.0
+margin_top = 523.0
+margin_right = 913.0
+margin_bottom = 582.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Game Title" type="TextureRect" parent="MainMenu"]
+margin_left = 172.0
+margin_top = 53.0
+margin_right = 1494.0
+margin_bottom = 501.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2022 State Buffers" type="TextureRect" parent="MainMenu"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 340.0
+margin_top = 550.0
+margin_right = 1369.0
+margin_bottom = 616.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start Button" type="TextureRect" parent="MainMenu"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 331.0
+margin_top = 288.0
+margin_right = 739.0
+margin_bottom = 336.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartGame" type="Button" parent="MainMenu"]
+self_modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+margin_left = 351.0
+margin_top = 288.0
+margin_right = 677.0
+margin_bottom = 359.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rules" type="TextureRect" parent="MainMenu"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 423.0
+margin_top = 467.0
+margin_right = 663.0
+margin_bottom = 532.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpenRules" type="Button" parent="MainMenu"]
+self_modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+margin_left = 443.0
+margin_top = 467.0
+margin_right = 587.0
+margin_bottom = 530.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Difficulty" type="TextureRect" parent="MainMenu"]
+margin_left = 376.0
+margin_top = 383.0
+margin_right = 833.0
+margin_bottom = 485.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 12 )
+
+[node name="OpenDifficulty" type="Button" parent="MainMenu"]
+self_modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+margin_left = 376.0
+margin_top = 383.0
+margin_right = 651.0
+margin_bottom = 444.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slide1" type="Control" parent="."]
+visible = false
+margin_left = 436.0
+margin_top = 445.0
+margin_right = 476.0
+margin_bottom = 485.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="TextureRect" parent="slide1"]
+margin_left = -351.0
+margin_top = -243.0
+margin_right = 1320.0
+margin_bottom = -13.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="slide1"]
+margin_left = -102.0
+margin_top = -110.0
+margin_right = 752.0
+margin_bottom = 71.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slide2" type="Control" parent="."]
+visible = false
+margin_left = 436.0
+margin_top = 445.0
+margin_right = 476.0
+margin_bottom = 485.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="TextureRect" parent="slide2"]
+margin_left = -336.0
+margin_top = -350.0
+margin_right = 925.0
+margin_bottom = 256.0
+rect_scale = Vector2( 0.65, 0.65 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slide3" type="Control" parent="."]
+visible = false
+margin_left = 436.0
+margin_top = 445.0
+margin_right = 476.0
+margin_bottom = 485.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="TextureRect" parent="slide3"]
+margin_left = -330.0
+margin_top = -297.0
+margin_right = 981.0
+margin_bottom = -113.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="slide3"]
+margin_left = -73.0
+margin_top = -159.0
+margin_right = 609.0
+margin_bottom = 382.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Difficulty_Screen" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Shuffle" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 651.0
+margin_top = 328.0
+margin_right = 1064.0
+margin_bottom = 485.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DMG" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 581.0
+margin_top = 248.0
+margin_right = 895.0
+margin_bottom = 334.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Smart" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 458.0
+margin_top = 167.0
+margin_right = 938.0
+margin_bottom = 255.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SmartUnchk" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 834.0
+margin_top = 167.0
+margin_right = 922.0
+margin_bottom = 256.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 16 )
+
+[node name="DmgUnchk" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 834.0
+margin_top = 248.0
+margin_right = 922.0
+margin_bottom = 337.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShuffleUnchk" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 835.0
+margin_top = 327.0
+margin_right = 923.0
+margin_bottom = 416.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 16 )
+
+[node name="SmartChk" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 834.0
+margin_top = 167.0
+margin_right = 922.0
+margin_bottom = 256.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DmgChk" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 834.0
+margin_top = 248.0
+margin_right = 922.0
+margin_bottom = 337.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShuffleChk" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 835.0
+margin_top = 327.0
+margin_right = 923.0
+margin_bottom = 416.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 20 )
+
+[node name="BabaHP" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 118.0
+margin_top = 248.0
+margin_right = 471.0
+margin_bottom = 336.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 17 )
+
+[node name="YourHP" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 115.0
+margin_top = 328.0
+margin_right = 590.0
+margin_bottom = 471.0
+rect_scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Check4" type="TextureRect" parent="Difficulty_Screen"]
+visible = false
+margin_left = 403.0
+margin_top = 247.0
+margin_right = 491.0
+margin_bottom = 336.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Check5" type="TextureRect" parent="Difficulty_Screen"]
+visible = false
+margin_left = 349.0
+margin_top = 327.0
+margin_right = 437.0
+margin_bottom = 416.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Default" type="TextureRect" parent="Difficulty_Screen"]
+margin_left = 119.0
+margin_top = 167.0
+margin_right = 403.0
+margin_bottom = 255.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SmartBtn" type="Button" parent="Difficulty_Screen"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 833.0
+margin_top = 167.0
+margin_right = 901.0
+margin_bottom = 233.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DmgBtn" type="Button" parent="Difficulty_Screen"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 833.0
+margin_top = 248.0
+margin_right = 901.0
+margin_bottom = 314.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShuffleBtn" type="Button" parent="Difficulty_Screen"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 833.0
+margin_top = 327.0
+margin_right = 901.0
+margin_bottom = 393.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackBtn" type="Button" parent="Difficulty_Screen"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 119.0
+margin_top = 502.0
+margin_right = 131.0
+margin_bottom = 563.0
+rect_scale = Vector2( 8.96, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefaultBtn" type="Button" parent="Difficulty_Screen"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 119.0
+margin_top = 167.0
+margin_right = 334.0
+margin_bottom = 233.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow" type="Sprite" parent="Difficulty_Screen"]
+position = Vector2( 172, 530 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 9 )
+
+[node name="BabaSpin" type="SpinBox" parent="Difficulty_Screen"]
+margin_left = 403.0
+margin_top = 248.0
+margin_right = 477.0
+margin_bottom = 313.0
+rect_pivot_offset = Vector2( 56, 73 )
+max_value = 9999.0
+value = 100.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouSpin" type="SpinBox" parent="Difficulty_Screen"]
+margin_left = 349.0
+margin_top = 328.0
+margin_right = 423.0
+margin_bottom = 393.0
+rect_pivot_offset = Vector2( 56, 73 )
+max_value = 9999.0
+value = 200.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Difficulty" type="Sprite" parent="Difficulty_Screen"]
+position = Vector2( 509, 77 )
+texture = ExtResource( 12 )
+
+[connection signal="button_down" from="ArrowLeft/LeftArrow" to="." method="_on_LeftArrow_button_down"]
+[connection signal="button_down" from="ArrowRight/RightArrow" to="." method="_on_RightArrow_button_down"]
+[connection signal="button_down" from="MainMenu/StartGame" to="." method="_on_StartGame_button_down"]
+[connection signal="button_down" from="MainMenu/OpenRules" to="." method="_on_OpenRules_button_down"]
+[connection signal="pressed" from="MainMenu/OpenDifficulty" to="." method="_on_OpenDifficulty_pressed"]
+[connection signal="pressed" from="Difficulty_Screen/SmartBtn" to="." method="_on_SmartBtn_pressed"]
+[connection signal="pressed" from="Difficulty_Screen/DmgBtn" to="." method="_on_DmgBtn_pressed"]
+[connection signal="pressed" from="Difficulty_Screen/ShuffleBtn" to="." method="_on_ShuffleBtn_pressed"]
+[connection signal="pressed" from="Difficulty_Screen/BackBtn" to="." method="_on_BackBtn_pressed"]
+[connection signal="pressed" from="Difficulty_Screen/DefaultBtn" to="." method="_on_DefaultBtn_pressed"]
+[connection signal="value_changed" from="Difficulty_Screen/BabaSpin" to="." method="_on_BabaSpin_value_changed"]
+[connection signal="value_changed" from="Difficulty_Screen/YouSpin" to="." method="_on_YouSpin_value_changed"]

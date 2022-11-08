@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/Menu/GAME_OVER.png" type="Texture" id=1]
+[ext_resource path="res://You_Lose.png" type="Texture" id=2]
+
+[node name="Lose Screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 449, -208 )
+color = Color( 0.160784, 0.192157, 0.254902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GAME_OVER" type="TextureRect" parent="."]
+margin_left = 287.0
+margin_top = 309.0
+margin_right = 722.0
+margin_bottom = 402.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 382.0
+margin_top = 39.0
+margin_right = 1125.0
+margin_bottom = 788.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )

@@ -1,0 +1,591 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://sprites/background.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Baba.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Tiles64/NEXT.png" type="Texture" id=3]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=4]
+[ext_resource path="res://sprites/connectors.png" type="Texture" id=5]
+[ext_resource path="res://levels/Pause Menu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sprites/tile_border.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Tiles64/AND.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Tiles64/BLOCK.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Tiles64/BOLT.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Tiles64/blank.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Tiles64/BABA.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Tiles64/IS.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Tiles64/DEAD.png" type="Texture" id=14]
+[ext_resource path="res://sprites/Tiles64/HEAL.png" type="Texture" id=15]
+[ext_resource path="res://sprites/Tiles64/MELT.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Tiles64/YOU.png" type="Texture" id=17]
+[ext_resource path="res://sprites/Tiles64/RAIN.png" type="Texture" id=18]
+[ext_resource path="res://levels/HP Bar.tscn" type="PackedScene" id=19]
+[ext_resource path="res://font/MyFont.ttf" type="DynamicFontData" id=20]
+[ext_resource path="res://levels/Lose Screen.tscn" type="PackedScene" id=21]
+[ext_resource path="res://levels/Win Screen.tscn" type="PackedScene" id=22]
+[ext_resource path="res://sprites/Menu/SHUFFLE.png" type="Texture" id=23]
+[ext_resource path="res://sprites/Wand.png" type="Texture" id=24]
+[ext_resource path="res://sprites/you.png" type="Texture" id=25]
+[ext_resource path="res://sprites/Menu/PAUSE.png" type="Texture" id=26]
+
+[sub_resource type="TileSet" id=3]
+0/name = "AND.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "BABA.png 1"
+1/texture = ExtResource( 12 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "blank.png 2"
+2/texture = ExtResource( 11 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "BLOCK.png 3"
+3/texture = ExtResource( 9 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "BOLT.png 4"
+4/texture = ExtResource( 10 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "DEAD.png 5"
+5/texture = ExtResource( 14 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "HEAL.png 6"
+6/texture = ExtResource( 15 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "IS.png 7"
+7/texture = ExtResource( 13 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "MELT.png 8"
+8/texture = ExtResource( 16 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "NEXT.png 9"
+9/texture = ExtResource( 3 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 64, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "RAIN.png 10"
+10/texture = ExtResource( 18 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 64, 64 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "YOU.png 11"
+11/texture = ExtResource( 17 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 64, 64 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "connectors.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 64, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "connectors.png 1"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 128, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "connectors.png 2"
+2/texture = ExtResource( 5 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 192, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "connectors.png 3"
+3/texture = ExtResource( 5 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 256, 0, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "connectors.png 4"
+4/texture = ExtResource( 5 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 64, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "connectors.png 5"
+5/texture = ExtResource( 5 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 64, 64, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "connectors.png 6"
+6/texture = ExtResource( 5 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 128, 64, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "connectors.png 7"
+7/texture = ExtResource( 5 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 192, 64, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "connectors.png 8"
+8/texture = ExtResource( 5 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 256, 64, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "connectors.png 9"
+9/texture = ExtResource( 5 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 320, 64, 64, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "connectors.png 10"
+10/texture = ExtResource( 5 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 64, 64 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "connectors.png 11"
+11/texture = ExtResource( 5 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 320, 0, 64, 64 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+extra_spacing_char = 1
+font_data = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+extra_spacing_char = 1
+font_data = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 20 )
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( -60, -25 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Baba" type="Sprite" parent="."]
+position = Vector2( 838, 113 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="TileBorder" type="Sprite" parent="."]
+position = Vector2( 516, 416 )
+scale = Vector2( 0.57, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="MagicalGirl" type="TextureRect" parent="."]
+margin_left = 99.0
+margin_top = 7.0
+margin_right = 610.0
+margin_bottom = 816.0
+rect_scale = Vector2( 0.23, 0.23 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wand" type="TextureRect" parent="."]
+margin_left = 218.0
+margin_top = 86.0
+margin_right = 794.0
+margin_bottom = 906.0
+rect_scale = Vector2( 0.13, 0.13 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Board" type="Control" parent="."]
+margin_left = 96.0
+margin_top = 256.0
+margin_right = 136.0
+margin_bottom = 296.0
+rect_scale = Vector2( 20.8258, 8.04 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tiles" type="TileMap" parent="Board"]
+scale = Vector2( 0.0480174, 0.124378 )
+tile_set = SubResource( 3 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Connect_C2E" type="TileMap" parent="Board"]
+scale = Vector2( 0.0480174, 0.124378 )
+tile_set = SubResource( 2 )
+format = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Connect_E2C" type="TileMap" parent="Board"]
+scale = Vector2( 0.0480174, 0.124378 )
+tile_set = SubResource( 2 )
+format = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="BabaHP" parent="." instance=ExtResource( 19 )]
+margin_left = 666.0
+margin_top = 192.0
+margin_right = 2068.0
+margin_bottom = 297.0
+rect_scale = Vector2( 0.25, 0.25 )
+
+[node name="YouHP" parent="." instance=ExtResource( 19 )]
+margin_left = 17.0
+margin_top = 192.0
+margin_right = 1419.0
+margin_bottom = 297.0
+rect_scale = Vector2( 0.25, 0.25 )
+
+[node name="TimerBar" parent="." instance=ExtResource( 19 )]
+margin_left = 96.0
+margin_top = 226.0
+margin_right = 1498.0
+margin_bottom = 331.0
+rect_scale = Vector2( 0.6, 0.25 )
+tint_under = Color( 0, 0, 0, 1 )
+
+[node name="BabaStats" type="RichTextLabel" parent="."]
+margin_left = 607.0
+margin_top = 33.0
+margin_right = 787.0
+margin_bottom = 141.0
+custom_fonts/normal_font = SubResource( 4 )
+text = "BLOCKS: 10
+NEXTS: 10
+HP: 100 / 100
+DMG: 6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouStats" type="RichTextLabel" parent="."]
+margin_left = 293.0
+margin_top = 33.0
+margin_right = 440.0
+margin_bottom = 113.0
+custom_fonts/normal_font = SubResource( 5 )
+text = "BLOCKS: 10
+NEXTS: 10
+HP: 100 / 100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseImg" type="TextureRect" parent="."]
+margin_left = 447.0
+margin_top = 23.0
+margin_right = 713.0
+margin_bottom = 133.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="Button" parent="."]
+show_behind_parent = true
+margin_left = 447.0
+margin_top = 25.0
+margin_right = 580.0
+margin_bottom = 77.0
+custom_fonts/font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShuffleImg" type="TextureRect" parent="."]
+visible = false
+margin_left = 434.0
+margin_top = 91.0
+margin_right = 724.0
+margin_bottom = 180.0
+rect_scale = Vector2( 0.55, 0.55 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shuffle" type="Button" parent="."]
+visible = false
+show_behind_parent = true
+margin_left = 434.0
+margin_top = 91.0
+margin_right = 594.0
+margin_bottom = 140.0
+custom_fonts/font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseMenu" parent="." instance=ExtResource( 6 )]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="WinScreen" parent="." instance=ExtResource( 22 )]
+visible = false
+rect_min_size = Vector2( 1024, 600 )
+
+[node name="LoseScreen" parent="." instance=ExtResource( 21 )]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="youHPshake" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="babaHPshake" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="BabaChoice" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="mouse_entered" from="Board" to="." method="_on_Board_mouse_entered"]
+[connection signal="mouse_exited" from="Board" to="." method="_on_Board_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="button_down" from="Pause" to="." method="_on_Pause_button_down"]
+[connection signal="button_down" from="Shuffle" to="." method="_on_Shuffle_button_down"]
